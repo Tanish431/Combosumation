@@ -1,4 +1,7 @@
 function loa(){
+    document.getElementById("min").disabled = true;
+    document.getElementById("max").disabled = true;
+    document.getElementById("sum").disabled = true;
     let min_1=Number(document.getElementById('min').value)
     let max_1=Number(document.getElementById('max').value)
     let sum=Number(document.getElementById('sum').value)
@@ -28,7 +31,7 @@ function loa(){
             a[a.length - 1]++
         }
         else if (sum_2==sum){
-            ans.innerHTML += "["+a+"]"
+            ans.innerHTML = "Best Combination: "+a
             a.pop()
             a[a.length - 1]++
             n.push("L")
@@ -53,6 +56,9 @@ function loa(){
     }
 }
 function clar(){
-    document.getElementById('answer').innerHTML="Possible combinations: "
+    document.getElementById("min").disabled = false;
+    document.getElementById("max").disabled = false;
+    document.getElementById("sum").disabled = false;
+    document.getElementById('answer').innerHTML="Best Combination: "
     document.getElementById("extra").innerHTML=""
 }
